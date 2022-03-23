@@ -19,25 +19,28 @@ header{
     background-color: #34A9A2;
     height: 100vh;
     width: 100%;
+
     
     
 }
 
 
-header .navigation{
+ .navigation{
     top: 10px;
- width: 100%;
-    position: fixed; 
-  background-color: #34A9A2;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    position:sticky;
+    top: 0;
+    background-color: #34A9A2;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
 
 }
- header .navigation .mainMenu{
+ .navigation .mainMenu{
     display: flex;
     list-style: none;
 }
-header .navigation .mainMenu li a{
+ .navigation .mainMenu li a{
     display: inline-block;
     padding: 1rem;
     text-decoration: none;
@@ -63,6 +66,7 @@ header .navigation .mainMenu li a{
     font-size: 1rem;
     cursor: pointer;
     color: white;
+    margin-left: 10px;
 }
 /* 
 .navigation .closeMenu{
@@ -71,43 +75,6 @@ header .navigation .mainMenu li a{
     cursor: pointer;
 } */
 
-@media(max-width:834px){
-    .navigation .mainMenu{
-        height: 100vh;
-        position: fixed;
-        top:0;
-        right:0;
-        left: 0;
-        z-index: 10;
-        flex-direction: column;
-        justify-content: center;
-        background: #34A9A2;
-        transition: top 1s ease;
-        display: none;
-    }
- .navigation .mainMenu .closeMenu{
-    display: block;
-    position:absolute;
-    top: 10px;
-    right: 10px;
- } 
-   
- .navigation .openMenu{
-     display: block;
- } 
- .navigation .mainMenu li a:hover{
-     background: none;
-     color: blue;
-     font-size: 1.6 rem;
- }
- .navigation .logo{
-    display: block;
-    position:relative;
-    top: 10px;
-    left: 10px;
-}
-
-}
 /* media querry */
 
 
@@ -183,19 +150,19 @@ header .welcome a:hover{
 }
 .aboutus-side .aboutus-side1 img{
     margin-top: 10px;
-height: 400px;
-width:400px;
-object-fit:contain;
-margin-right: 50px;
+    height: 400px;
+    width:400px;
+    object-fit:contain;
+    margin-right: 50px;
 }
 .aboutus-side2 h2{
     font-size: 2em;
 }
 .aboutus-side2 ul{
     line-height: 2;
-list-style:circle;
-margin-left: 20px;
-margin-bottom: 30px;
+    list-style:circle;
+    margin-left: 20px;
+    margin-bottom: 30px;
 }
 .aboutus-side2 a{
     
@@ -235,7 +202,6 @@ margin-bottom: 30px;
 
 .myservice-image1{
     background-color: #C4C4C4;
-    
     height :400px; 
     width: 400px; 
     margin: 30px;
@@ -303,6 +269,9 @@ align-items: center;
 /* portifolio block */
 
 .portifolio{
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    
     height: 100vh;
     width: 100%;
 }
@@ -312,9 +281,9 @@ align-items: center;
 }
 .portifolio .portifolio-navigation .navigate{
     z-index: 2;  
-  top: 0;
-  width: 100%;
-  padding-bottom: 10px;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
     
 }
 .portifolio .portifolio-navigation .navigate ul{
@@ -348,8 +317,9 @@ align-items: center;
 .portifolio-image1{
     
    background-color: #34A9A2;
-    height :300px; 
-    width: 300px; 
+   flex-direction: column;
+   height :300px; 
+   width: 300px; 
   margin: 30px;
     padding: 20px;
 
@@ -367,9 +337,12 @@ align-items: center;
     width: 300px; 
     margin: 30px;
     padding: 20px;
-   
+    
+    
 }
 .portifolio-image2 img{
+    display: inline;
+    flex-wrap: wrap;
     height: 260px;
     width: 260px;
     object-fit: cover;
@@ -410,8 +383,8 @@ align-items: center;
 
 }
 .contact-image .contact-image1{
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 300px;
     margin: 10px;
 }
 .contact-image .contact-image1 .iconify{
@@ -421,8 +394,8 @@ align-items: center;
     color: #34A9A2;
 }
 .contact-image .contact-image2{
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 300px;
     margin: 10px;
    
 }
@@ -435,8 +408,8 @@ align-items: center;
 }
 
 .contact-image .contact-image3{
-    height: 300px;
-    width: 400px;
+    height: 200px;
+    width: 300px;
     margin: 10px;
 }
 .contact-image .contact-image3 .iconify{
@@ -522,7 +495,7 @@ footer .footer{
 
 .experience{
     height: 100vh;
-    width: 100%;
+    width: 73%;
 }
 .experience #experienceid{
     display: block;
@@ -666,6 +639,121 @@ footer .footer{
     .aboutus-side2 .iconify{
         margin: 0.5rem;
         margin-bottom: 2rem;
+    }
+
+}
+
+
+@media(max-width:834px){
+    section{
+        margin-bottom: 20rem;
+    }
+
+ .navigation{
+    top: 0px;
+    width: 100%;
+    position: fixed; 
+    background-color: #34A9A2;
+    display: flex;
+    justify-content: space-between
+
+    }
+    .navigation .mainMenu{
+        height: 60vh;
+        position: fixed;
+        top:0;
+        right:0;
+        left: 80%;
+        z-index: 20;
+        width: 20%;
+        flex-direction: column;
+        justify-content: center;
+        background: #34A9A2;
+        transition: top 1s ease;
+        display: none;
+    }
+ .navigation .mainMenu .closeMenu{
+    display: block;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+ } 
+   
+ .navigation .openMenu{
+     display: block;
+ } 
+ .navigation .mainMenu li a:hover{
+     background: none;
+     color: blue;
+     font-size: 1.6 rem;
+ }
+ .navigation .logo{
+    display: block;
+    position:relative;
+    top: 10px;
+    left: 10px;
+}
+.portifolio-image{
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience .experience-image{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    height: 135vh;
+    left: 7%; 
+}
+.blog-image{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog .blog-image{
+    height: 135vh;
+}
+.myservice h2{
+    margin-top: 20rem;
+}
+.myservice-image{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* align-items: center; */
+    
+}
+.myservice-image .myservice-image1{
+    height: 300px;
+    width: 300px;
+}
+.myservice-image .myservice-image2{
+    height: 300px;
+    width: 300px;
+}
+.myservice-image .myservice-image3{
+    height: 300px;
+    width: 300px;
+}
+.aboutus{
+    height: 125vh;
+}
+.aboutus-side{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+.aboutus-side .aboutus-side1{
+width: 100%;
+}
+.aboutus-side .aboutus-side1 img{
+    margin-left: 15%;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 30px;
     }
 
 }
