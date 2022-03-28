@@ -726,14 +726,14 @@ width: 100%;
 }
 
 
-@media(max-width:550px){
+@media(min-width:330px) and (max-width:550px){
     section{
         margin-bottom: 20rem;
     }
 
  .navigation{
     top: 0px;
-    width: 76%;
+    width: 55%;
     position: fixed; 
     background-color: #34A9A2;
     display: flex;
@@ -779,7 +779,7 @@ width: 100%;
 }
 
 header{
-    width: 70vh;
+    width: 47vh;
     height: 140vh;
 }
 header .welcome h2{
