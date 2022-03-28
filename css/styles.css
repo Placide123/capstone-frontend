@@ -8,20 +8,13 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     overflow-x: hidden; 
-    
-    
-    
-
 }
 
  /* the css of the header section  */
 header{
     background-color: #34A9A2;
     height: 100vh;
-    width: 100%;
-
-    
-    
+    width: 100%;    
 }
 
 
@@ -48,6 +41,13 @@ header{
     color: white;
     font-size: 1rem;
 }
+ .navigation .mainMenu li a:hover{
+    color: #34A9A2;
+        background-color: beige;
+        padding:10px;
+        border:10px solid #34A9A2;
+        border-radius: 20px;
+}
 .navigation .openMenu{
     
     font-size: 1rem;
@@ -62,7 +62,7 @@ header{
     cursor: pointer;
 }
 .navigation .logo{
-    
+    margin-top: 10px;
     font-size: 1rem;
     cursor: pointer;
     color: white;
@@ -145,7 +145,7 @@ header .welcome a:hover{
 .aboutus-side{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: beige;
     margin: 60px;
 }
 .aboutus-side .aboutus-side1 img{
@@ -166,7 +166,7 @@ header .welcome a:hover{
 }
 .aboutus-side2 a{
     
-    background-color: white;
+    background-color: beige;
     border:  2px solid #34A9A2 ;
     border-radius: 10px ;
     color: #34A9A2;
@@ -182,6 +182,7 @@ header .welcome a:hover{
 
 .myservice{
     height: 100vh;
+    background-color: beige;
     
     
 }
@@ -217,59 +218,39 @@ header .welcome a:hover{
     padding: 20px;
 }
 .myservice-image3{
-    background-color: rgba(196, 196, 196);
-    
+    background-color: rgba(196, 196, 196);  
     height :400px; 
     width: 400px; 
     margin: 30px;
     padding: 20px;
 }
 
-.myservice-image1 .iconify{
+.myservice-image1 .iconify,
+.myservice-image2 .iconify,
+.myservice-image3 .iconify{
 position: relative;
-top: 10%;
-left: 30%;
+top: 20%;
+left: 40%;
 align-items: center;
 
 }
-.myservice-image1 p{
+.myservice-image1 p,
+.myservice-image2 p,
+.myservice-image3 p{
     position: relative;
     top: 40%;
-    left: 28%;
+    left: 25%;
     align-items: center; 
     }
 
-.myservice-image2 .iconify{
-        position: relative;
-        top: 10%;
-        left: 30%;
-        align-items: center;
-        
-        }
-.myservice-image2 p{
-            position: relative;
-            top: 40%;
-            left: 28%;
-            align-items: center; 
-            }
-.myservice-image3 .iconify{
-                position: relative;
-                top: 10%;
-                left: 30%;
-                align-items: center;
-                
-                }
-.myservice-image3 p{
-                    position: relative;
-                    top: 40%;
-                    left: 28%;
-                    align-items: center; 
-                    }
+
+
 
 .portifolio{
     
     height: 100vh;
     width: 100%;
+    background-color: beige;
 }
 .portifolio h2{
     display: block;
@@ -306,63 +287,64 @@ align-items: center;
 .portifolio .portifolio-image{
     display: flex;
     position: absolute;
-    left: 7%;  
+    left: 6%;  
     
 }
     
 .portifolio-image1{
     
-   background-color: #34A9A2;
+   /* background-color: #34A9A2; */
    flex-direction: column;
-   height :300px; 
-   width: 300px; 
+   height :400px; 
+   width: 400px; 
   margin: 30px;
-    padding: 20px;
+    /* padding: 20px; */
 
    
 }
 .portifolio-image1 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;
 }
 .portifolio-image2{
     
-    background-color: #34A9A2;
-    height :300px; 
-    width: 300px; 
+    /* background-color: #34A9A2; */
+    height :400px; 
+    width: 400px; 
     margin: 30px;
-    padding: 20px;
+    /* padding: 20px; */
     
     
 }
 .portifolio-image2 img{
     display: inline;
     flex-wrap: wrap;
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;
 }
 
 .portifolio-image3{
     
-    background-color: #34A9A2;
-    height :300px; 
-    width: 300px; 
+    /* background-color: #34A9A2; */
+    height :400px; 
+    width: 400px; 
     margin: 30px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .portifolio-image3 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;
 }
 
 
 /* contact block */
 .contact{
-    height: 150vh;
+    height: 125vh;
     width: 100%;
+    background-color: beige;
 }
 .contact h2{
     text-align: center;
@@ -370,48 +352,57 @@ align-items: center;
 }
 .contact p{
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .contact-image{
     display: flex;
     height:auto;
+    margin-left: 50px;
 
 }
 .contact-image .contact-image1{
-    height: 200px;
-    width: 300px;
-    margin: 10px;
+    height: 300px;
+    width: 400px;
+    margin: 30px;
 }
+.contact-image .contact-image1 p,
+.contact-image .contact-image2 p,
+.contact-image .contact-image3 p{
+    text-align: center;
+    margin: 30px;
+    font-weight: 300;
+}
+
 .contact-image .contact-image1 .iconify{
     position: relative;
     align-items: center;
-    left:38%;
+    left:45%;
     color: #34A9A2;
 }
 .contact-image .contact-image2{
-    height: 200px;
-    width: 300px;
-    margin: 10px;
+    height: 300px;
+    width: 400px;
+    margin: 30px;
    
 }
 .contact-image .contact-image2 .iconify{
     position: relative;
     align-items: center;
-    left:38%;
+    left:45%;
     color: #34A9A2;
     
 }
 
 .contact-image .contact-image3{
-    height: 200px;
-    width: 300px;
-    margin: 10px;
+    height: 300px;
+    width: 400px;
+    margin: 30px;
 }
 .contact-image .contact-image3 .iconify{
     position: relative;
     align-items: center;
-    left:38%;
+    left:45%;
     color: #34A9A2;
     
 }
@@ -425,7 +416,7 @@ align-items: center;
     margin-left:50px;
     border:2px solid #34A9A2 ;
     border-radius: 10px;
-padding: 10px;
+    padding: 10px;
 
 }
 
@@ -436,7 +427,7 @@ padding: 10px;
     margin-left:50px;
     border:2px solid #34A9A2 ;
     border-radius: 10px;
-padding: 10px;
+    padding: 10px;
 
 }
 .contact .message .message1 #message{
@@ -479,7 +470,7 @@ footer{
     
     width: 100%;
     
-    background-color: white;
+    background-color: beige;
      
 }
 footer .footer{
@@ -491,7 +482,8 @@ footer .footer{
 
 .experience{
     height: 100vh;
-    width: 73%;
+    width: 100%;
+    background-color: beige;
 }
 .experience #experienceid{
     display: block;
@@ -504,15 +496,15 @@ footer .footer{
     left: 7%; 
 }
 .experience .experience-image .experience-image1{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .experience .experience-image .experience-image1 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover; 
     margin-bottom: 20px;  
 }
@@ -520,15 +512,15 @@ footer .footer{
     padding-bottom: 15px;
 }
 .experience .experience-image .experience-image2{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .experience .experience-image .experience-image2 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;   
     margin-bottom: 20px;  
 }
@@ -536,24 +528,28 @@ footer .footer{
     padding-bottom: 15px;
 }
 .experience .experience-image .experience-image3{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .experience .experience-image .experience-image3 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;  
     margin-bottom: 20px;   
 }
 .experience .experience-image .experience-image3 h2,h3{
     padding-bottom: 15px;
 }
+
+/* blog css */
+
 .blog{
     height: 100vh;
-    width: 100%; 
+    width: 100%;
+    background-color: beige; 
 }
 
 .blog #blogid{
@@ -567,15 +563,15 @@ footer .footer{
     left: 7%; 
 }
 .blog .blog-image .blog-image1{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .blog .blog-image .blog-image1 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover; 
     margin-bottom: 20px;  
 }
@@ -583,15 +579,15 @@ footer .footer{
     padding-bottom: 15px;
 }
 .blog .blog-image .blog-image2{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .blog .blog-image .blog-image2 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;   
     margin-bottom: 20px;  
 }
@@ -599,46 +595,21 @@ footer .footer{
     padding-bottom: 15px;
 }
 .blog .blog-image .blog-image3{
-    background-color: white;
-    height :300px; 
-    width: 300px; 
+    background-color: beige;
+    height :400px; 
+    width: 400px; 
   margin: 30px;
     padding: 10px;
 }
 .blog .blog-image .blog-image3 img{
-    height: 260px;
-    width: 260px;
+    height: 360px;
+    width: 360px;
     object-fit: cover;  
     margin-bottom: 20px;   
 }
 .blog .blog-image .blog-image3 h2,h3{
     padding-bottom: 15px;
 }
-
-@media(min-width:375px)and (max-width:500px){
-    header{
-        width: 100%;
-    }
-    .welcome{
-        text-align: center;
-    }
-
-    .aboutus{
-        display: flex;
-        flex-direction: column;
-        height: 180vh;
-    }
-    .aboutus-side{
-        display: flex;
-        flex-direction: column;
-    }
-    .aboutus-side2 .iconify{
-        margin: 0.5rem;
-        margin-bottom: 2rem;
-    }
-
-}
-
 
 @media(max-width:834px){
     section{
@@ -679,9 +650,11 @@ footer .footer{
      display: block;
  } 
  .navigation .mainMenu li a:hover{
-     background: none;
-     color: blue;
-     font-size: 1.6 rem;
+    color: #34A9A2;
+    background-color: beige;
+    padding:10px;
+    border:10px solid #34A9A2;
+    border-radius: 20px;
  }
  .navigation .logo{
     display: block;
@@ -714,10 +687,8 @@ footer .footer{
     width: 100%;
     margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
-    
-    /* align-items: center; */
-    
+    flex-wrap: wrap;    
+    /* align-items: center; */    
 }
 .myservice-image .myservice-image1{
     height: 300px;
@@ -751,5 +722,169 @@ width: 100%;
     height: 500px;
     margin-bottom: 30px;
     }
+
+}
+
+
+@media(max-width:550px){
+    section{
+        margin-bottom: 20rem;
+    }
+
+ .navigation{
+    top: 0px;
+    width: 76%;
+    position: fixed; 
+    background-color: #34A9A2;
+    display: flex;
+    justify-content: space-between
+
+    }
+    .navigation .mainMenu{
+        height: 60vh;
+        position: fixed;
+        top:0;
+        right:0;
+        left: 60%;
+        z-index: 20;
+        width: 20%;
+        flex-direction: column;
+        justify-content: center;
+        background: #34A9A2;
+        transition: top 1s ease;
+        display: none;
+    }
+ .navigation .mainMenu .closeMenu{
+    display: block;
+    position:absolute;
+    top: 10px;
+    right: 40px;
+ } 
+   
+ .navigation .openMenu{
+     display: block;
+ } 
+ .navigation .mainMenu li a:hover{
+    color: #34A9A2;
+    background-color: beige;
+    padding:10px;
+    border:10px solid #34A9A2;
+    border-radius: 20px;
+ }
+ .navigation .logo{
+    display: block;
+    position:relative;
+    top: 10px;
+    left: 10px;
+}
+
+header{
+    width: 70vh;
+    height: 140vh;
+}
+header .welcome h2{
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left: 40%;
+    color: white;
+
+}
+header .welcome h3{
+    font-size: 1rem;
+    position: absolute;
+    top:60%;
+    left: 43%;
+   color: white;
+}
+
+header .welcome p{
+    position: absolute;
+    font-size: 0.8rem;
+    width: 60vh;
+    top:70%;
+    left: 5%; 
+    display: block; 
+    color: white;
+}
+header .welcome a{
+    position: absolute;
+    top: 90%;
+}
+header .welcome a:hover{
+    background-color: beige;
+    color: aqua;
+}
+.portifolio-image{
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience .experience-image{
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    height: 135vh;
+    left: 7%; 
+}
+.blog-image{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog .blog-image{
+    height: 135vh;
+}
+.myservice{
+    width: 65vh;
+    height: 140vh;
+}
+.myservice h2{
+    margin-top: 20rem;
+}
+.myservice-image{
+    margin-left: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;    
+    /* align-items: center; */    
+}
+.myservice-image .myservice-image1,
+.myservice-image .myservice-image2,
+.myservice-image .myservice-image3{
+    height: 300px;
+    width: 300px;
+    margin-left: 2rem;
+}
+.aboutus{
+    height: 125vh;
+    width:140vw;
+    
+}
+.aboutus-side{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+}
+.aboutus-side .aboutus-side1{
+width:100vw;
+}
+.aboutus-side .aboutus-side1 img{
+    
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    right: 10%;
+    }
+    .aboutus-side .aboutus-side2 svg{
+    
+        padding:5px;
+        margin: 20px;
+
+        }
+
 
 }

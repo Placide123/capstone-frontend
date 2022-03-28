@@ -59,7 +59,7 @@ body{
 
 @media(max-width:800px){
     .navigation .mainMenu{
-        height: 100vh;
+        height: 110vh;
         position: fixed;
         top:0;
         right:0;
