@@ -68,18 +68,10 @@ header{
     color: white;
     margin-left: 10px;
 }
-/* 
-.navigation .closeMenu{
-    font-size: 2rem;
-    display: none;
-    cursor: pointer;
-} */
-
-/* media querry */
-
 
  header.welcome{
     position: absolute;
+    height: 100vh;
     width: 100%;
     left: 25%;
     top: 70%;
@@ -106,6 +98,7 @@ header .welcome p{
     left: 5%;  
     right: 5%;
     color: white;
+    text-align:center;
 
 }
 header .welcome a{
@@ -121,7 +114,7 @@ header .welcome a{
     border: 2px solid white;
 }
 header .welcome a:hover{
-    background-color: #C4C4C4;
+    background-color: beige;
     color: aqua;
 }
 /* end of the header css */
@@ -130,6 +123,7 @@ header .welcome a:hover{
 .aboutus{
     background-color:white;
     height: 100vh;
+    width: 100%;
 
     
 }
@@ -144,108 +138,91 @@ header .welcome a:hover{
 
 .aboutus-side{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     background-color: beige;
-    margin: 60px;
+    height: 500px;   
+    width: 100%;
 }
+
 .aboutus-side .aboutus-side1 img{
-    margin-top: 10px;
+    margin-top: 1rem;
     height: 400px;
-    width:400px;
+    width: 100%; 
     object-fit:contain;
-    margin-right: 50px;
+  
 }
+.aboutus-side2{
+    width: 50%;
+    padding: 0 50px;
+}
+
 .aboutus-side2 h2{
     font-size: 2em;
+    margin-top: 1rem;
 }
-.aboutus-side2 ul{
-    line-height: 2;
+.aboutus-side2 ul li{
+    line-height: 1;
     list-style:circle;
     margin-left: 20px;
     margin-bottom: 30px;
 }
-.aboutus-side2 a{
-    
+.aboutus-side2 .btn {
     background-color: beige;
     border:  2px solid #34A9A2 ;
-    border-radius: 10px ;
+    border-radius: 10px ; 
     color: #34A9A2;
     padding: 10px;
     text-decoration: none;
-    margin-top: 50px;
+   bottom:2rem;
 }
-.aboutus-side2 .iconify{
-    margin: 2rem;
+.aboutus-side2 .icons1{  
+margin: 20px;
 }
-
 /* my service blog */
-
 .myservice{
     height: 100vh;
-    background-color: beige;
-    
-    
+    width: 100%;
+    background-color:beige;   
 }
 .myservice h2{
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-top: 20px;
     font-size: 2em;
 }
 .myservice-image{
     display: flex;
-    flex-direction:row ;
-    align-items: center;
-  justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 80px;
     
 }
-
 .myservice-image1{
     background-color: #C4C4C4;
     height :400px; 
-    width: 400px; 
-    margin: 30px;
-    padding: 20px;
-
+    width: 30%; 
 }
-.myservice-image2{
-    background-color: #C4C4C4;
-    
-    height :400px; 
-    width: 400px; 
-    margin: 30px;
-    padding: 20px;
-}
-.myservice-image3{
-    background-color: rgba(196, 196, 196);  
-    height :400px; 
-    width: 400px; 
-    margin: 30px;
-    padding: 20px;
-}
-
-.myservice-image1 .iconify,
-.myservice-image2 .iconify,
-.myservice-image3 .iconify{
+.myservice-image1 .iconify{
 position: relative;
 top: 20%;
-left: 40%;
+left: 39%;
 align-items: center;
-
 }
-.myservice-image1 p,
-.myservice-image2 p,
-.myservice-image3 p{
+.myservice-image1 p{
     position: relative;
     top: 40%;
     left: 25%;
     align-items: center; 
     }
+.card__image__one{
+        margin-right: 50px;
+      }
+.card__image__two{
+          margin-right: 50px;
+        }
 
 
-
-
+ 
 .portifolio{
     
     height: 100vh;
@@ -286,63 +263,28 @@ align-items: center;
 
 .portifolio .portifolio-image{
     display: flex;
-    position: absolute;
-    left: 6%;  
-    
-}
-    
-.portifolio-image1{
-    
-   /* background-color: #34A9A2; */
-   flex-direction: column;
-   height :400px; 
-   width: 400px; 
-  margin: 30px;
-    /* padding: 20px; */
-
-   
-}
-.portifolio-image1 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;
-}
-.portifolio-image2{
-    
-    /* background-color: #34A9A2; */
-    height :400px; 
-    width: 400px; 
-    margin: 30px;
-    /* padding: 20px; */
-    
-    
-}
-.portifolio-image2 img{
-    display: inline;
-    flex-wrap: wrap;
-    height: 360px;
-    width: 360px;
-    object-fit: cover;
+    flex-wrap: wrap; 
+    padding: 20px 80px; 
+    width: 100%;
+    background-color: beige;
 }
 
-.portifolio-image3{
+.portifolio-image__container{ 
+    width: 30%;
+    height: 400px;
     
-    /* background-color: #34A9A2; */
-    height :400px; 
-    width: 400px; 
-    margin: 30px;
-    /* padding: 20px; */
-}
-.portifolio-image3 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;
-}
+    }
+
+   .portifolio-image__container img{
+   width:100%;
+   height: 400px;
+   object-fit: cover;
+   }
 
 
-/* contact block */
+/* contact block*/ 
 .contact{
-    height: 125vh;
+    height: 100vh;
     width: 100%;
     background-color: beige;
 }
@@ -352,23 +294,19 @@ align-items: center;
 }
 .contact p{
     text-align: center;
-    /* padding: 20px; */
+  
 }
 
 .contact-image{
     display: flex;
-    height:auto;
-    margin-left: 50px;
-
+    flex-wrap: wrap;
+    padding: 20px 80px;
 }
 .contact-image .contact-image1{
-    height: 300px;
-    width: 400px;
-    margin: 30px;
+    height: 200px;
+    width: 30%;   
 }
-.contact-image .contact-image1 p,
-.contact-image .contact-image2 p,
-.contact-image .contact-image3 p{
+.contact-image .contact-image1 p{
     text-align: center;
     margin: 30px;
     font-weight: 300;
@@ -380,34 +318,12 @@ align-items: center;
     left:45%;
     color: #34A9A2;
 }
-.contact-image .contact-image2{
-    height: 300px;
-    width: 400px;
-    margin: 30px;
-   
-}
-.contact-image .contact-image2 .iconify{
-    position: relative;
-    align-items: center;
-    left:45%;
-    color: #34A9A2;
-    
-}
-
-.contact-image .contact-image3{
-    height: 300px;
-    width: 400px;
-    margin: 30px;
-}
-.contact-image .contact-image3 .iconify{
-    position: relative;
-    align-items: center;
-    left:45%;
-    color: #34A9A2;
-    
-}
 
 /* message block */
+
+.message{
+    flex-basis: 100%;
+}
 
 .contact .message .message1 #name{
     display:block;
@@ -437,10 +353,10 @@ align-items: center;
     margin-left:50px;
     border:2px solid #34A9A2 ;
     border-radius: 10px;
-padding: 10px;
-text-align: top;
-top:0;
-height: 20vh;
+    padding: 10px;
+    text-align: top;
+    top:0;
+    height: 20vh;
 
 }
 .contact .message .message1 button{
@@ -452,19 +368,32 @@ height: 20vh;
     color: #34A9A2;
     font-weight: 500;
 }
+.subscribe{
+    flex-basis: 100%;
+}
+.subscribe p{
+position:absolute;
+margin-top: 2rem;
+margin-left: 1%;
+}
 
 .contact .subscribe input{   
-margin-left: 39%;
+margin-left: 1%;
+margin-top: 3.2rem;
 padding: 8px;
 border:2px solid #34A9A2 ;
-    border-radius: 10px;
+border-radius: 10px;
 }
 .contact .subscribe button{   
     
     padding: 8px;
     border:2px solid #34A9A2 ;
-        border-radius: 20px;
+    border-radius: 20px;
     }
+.emailuse{
+    display: flex;
+    width: 100%;
+}
 
 footer{
     
@@ -478,70 +407,51 @@ footer .footer{
     display: block;
     text-align: center;
 }
-
+*/
 
 .experience{
     height: 100vh;
     width: 100%;
-    background-color: beige;
+    padding: 20px 80px; 
 }
 .experience #experienceid{
     display: block;
     text-align: center;
-    
+ 
 }
 .experience .experience-image{
     display: flex;
-    position: absolute;
-    left: 7%; 
-}
-.experience .experience-image .experience-image1{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
+    flex-wrap: wrap;
     padding: 10px;
 }
-.experience .experience-image .experience-image1 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover; 
-    margin-bottom: 20px;  
-}
+
 .experience .experience-image .experience-image1 h2,h3{
     padding-bottom: 15px;
 }
-.experience .experience-image .experience-image2{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
-    padding: 10px;
-}
-.experience .experience-image .experience-image2 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;   
-    margin-bottom: 20px;  
-}
+
+
 .experience .experience-image .experience-image2 h2,h3{
     padding-bottom: 15px;
 }
-.experience .experience-image .experience-image3{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
-    padding: 10px;
-}
-.experience .experience-image .experience-image3 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;  
-    margin-bottom: 20px;   
-}
+
+
 .experience .experience-image .experience-image3 h2,h3{
     padding-bottom: 15px;
+}
+.experience__image__container{
+    width: 30%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.experience  .experience-image1,
+.experience  .experience-image2{
+    margin-right: 50px;
+}
+
+.experience__image__container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* blog css */
@@ -559,58 +469,40 @@ footer .footer{
 }
 .blog .blog-image{
     display: flex;
-    position: absolute;
-    left: 7%; 
+    flex-wrap: wrap;
+    padding: 20px 80px;
 }
-.blog .blog-image .blog-image1{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
-    padding: 10px;
+.blog__image__container{
+    width: 30%;
+    height: 400px;
+    margin-bottom: 20px; 
 }
-.blog .blog-image .blog-image1 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover; 
-    margin-bottom: 20px;  
+.blog__image__container img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
 }
+
 .blog .blog-image .blog-image1 h2,h3{
     padding-bottom: 15px;
 }
-.blog .blog-image .blog-image2{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
-    padding: 10px;
-}
-.blog .blog-image .blog-image2 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;   
-    margin-bottom: 20px;  
-}
+
+
 .blog .blog-image .blog-image2 h3{
     padding-bottom: 15px;
 }
-.blog .blog-image .blog-image3{
-    background-color: beige;
-    height :400px; 
-    width: 400px; 
-  margin: 30px;
-    padding: 10px;
-}
-.blog .blog-image .blog-image3 img{
-    height: 360px;
-    width: 360px;
-    object-fit: cover;  
-    margin-bottom: 20px;   
-}
+
 .blog .blog-image .blog-image3 h2,h3{
     padding-bottom: 15px;
 }
+.blog-image1{
+    margin-right:50px;
+}
+.blog-image2{
+    margin-right:50px;
+}
 
+/*
 @media(max-width:834px){
     section{
         margin-bottom: 20rem;
@@ -677,9 +569,7 @@ footer .footer{
     display: flex;
     flex-wrap: wrap;
 }
-.blog .blog-image{
-    height: 135vh;
-}
+
 .myservice h2{
     margin-top: 20rem;
 }
@@ -688,8 +578,10 @@ footer .footer{
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;    
-    /* align-items: center; */    
+    align-items: center;   
 }
+*/
+/*
 .myservice-image .myservice-image1{
     height: 300px;
     width: 300px;
@@ -724,17 +616,19 @@ width: 100%;
     }
 
 }
+*/
 
 
 @media(min-width:330px) and (max-width:550px){
     section{
-        margin-bottom: 20rem;
+        margin-bottom: 0.5rem;
     }
 
  .navigation{
-    top: 0px;
-    width: 55%;
-    position: fixed; 
+    
+    width: 100%;
+    position:sticky;
+    top: 0;
     background-color: #34A9A2;
     display: flex;
     justify-content: space-between
@@ -743,11 +637,11 @@ width: 100%;
     .navigation .mainMenu{
         height: 60vh;
         position: fixed;
-        top:0;
+        top:5;
         right:0;
-        left: 60%;
+        left: 50%;
         z-index: 20;
-        width: 20%;
+        width: 40%;
         flex-direction: column;
         justify-content: center;
         background: #34A9A2;
@@ -758,7 +652,7 @@ width: 100%;
     display: block;
     position:absolute;
     top: 10px;
-    right: 40px;
+    right: 10px;
  } 
    
  .navigation .openMenu{
@@ -779,112 +673,231 @@ width: 100%;
 }
 
 header{
-    width: 47vh;
-    height: 140vh;
+    width:100%;
+    height: 100vh;
 }
 header .welcome h2{
-    font-size: 1rem;
+    font-size: 0.7rem;
     display: inline-block;
     position: absolute;
-    top:50%;
-    left: 40%;
+    top:30%;
+    left: 30%;
     color: white;
 
 }
 header .welcome h3{
-    font-size: 1rem;
+    font-size: 0.7rem;
     position: absolute;
-    top:60%;
-    left: 43%;
+    top:40%;
+    left: 35%;
    color: white;
 }
 
 header .welcome p{
     position: absolute;
-    font-size: 0.8rem;
-    width: 60vh;
-    top:70%;
-    left: 5%; 
+    font-size: 0.5rem;
+    width: 80%;
+    top:50%;
+    left: 10%; 
     display: block; 
     color: white;
 }
 header .welcome a{
     position: absolute;
-    top: 90%;
+    padding: 10px;
+    margin-left: 30px;
+    left: 25%;
+    top: 65%;
 }
 header .welcome a:hover{
     background-color: beige;
     color: aqua;
 }
-.portifolio-image{
-    display: flex;
-    flex-wrap: wrap;
-}
-.experience .experience-image{
-    display: flex;
-    position: absolute;
-    flex-wrap: wrap;
-    height: 135vh;
-    left: 7%; 
-}
-.blog-image{
-    display: flex;
-    flex-wrap: wrap;
-}
-.blog .blog-image{
-    height: 135vh;
-}
-.myservice{
-    width: 65vh;
-    height: 140vh;
-}
-.myservice h2{
-    margin-top: 20rem;
-}
-.myservice-image{
-    margin-left: 2rem;
-    width: 100%;
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;    
-    /* align-items: center; */    
-}
-.myservice-image .myservice-image1,
-.myservice-image .myservice-image2,
-.myservice-image .myservice-image3{
-    height: 300px;
-    width: 300px;
-    margin-left: 2rem;
-}
+
 .aboutus{
-    height: 125vh;
-    width:140vw;
-    
+    position: relative;
+    background-color:beige;
+    height: 170vh;  
+    width: 100%;  
 }
-.aboutus-side{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    
+
+.aboutustitle p{
+    display: block;
+    font-size: 0.8rem;
+    margin: 10px;
+}
+
+
+.aboutus-side .aboutus-side2 {
+    padding: 20px 0;
+    height: 500px;
+    width:500px;
+    padding:0 0 0 4rem;
+
 }
 .aboutus-side .aboutus-side1{
-width:100vw;
+    height: 500px;
+    width:500px;
+  align-items: center;
+    object-fit: cover;
 }
-.aboutus-side .aboutus-side1 img{
+
+
+
+/* .aboutus-side .aboutus-side1 img{
+    height: 500px;
+    width: 500px; 
+    margin-bottom: 20px;  
     
-    width: 300px;
+} */
+.aboutus-side2 .iconify{
+    margin: 0.3rem; 
+}
+
+
+.myservice{
+    height: 140vh;
+    width: 100%;
+}
+
+.myservice-image{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 65px;
+   
+}
+.myservice-image1{
+    height: 250px;
+    width: 100%;
+}
+.card__image__one,
+.card__image__two{
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+.portifolio{
+    height: 180vh;
+    width: 100%;
+}
+.portifolio .portifolio-image{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 170vh;
+    padding: 10px 65px;
+    
+}
+.portifolio .portifolio-image__container{
     height: 300px;
-    margin-bottom: 30px;
-    right: 10%;
-    }
-    .aboutus-side .aboutus-side2 svg{
-    
-        padding:5px;
-        margin: 20px;
+    width: 100%;
+   
+}
 
-        }
+.portifolio .portifolio-image__container img{
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+
+    
+}
+
+
+.experience{
+    height: 250vh;
+    width: 100%;
+    padding: 10px 60px;
+}
+
+.experience__image__container{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 250px;
+}
+.experience  .experience-image1,
+.experience  .experience-image2{
+    margin-right: 0;
+}
+
+.blog {
+    height: 250vh;
+    width: 100%;
+}
+ .blog .blog-image{
+    height: 350vh;
+    width: 100%;
+    flex-direction: column;
+ }
+ .blog__image__container{
+    width: 100%;
+    height: 300px;
+    margin-right: 0;
+    margin-bottom: 220px;
+}
+.contact{
+    height: 180vh;
+}
+.contact .contact-image1{
+    height: 200px;
+    width: 100%;
+}
+.emailuse{
+    flex-direction: column;
+}
+.subscribe{
+    margin-left: 20px;
+    
+}
+footer p{
+    padding-bottom: 10px;
+}
+
+}
+/*
+@media(max-width:1024px){
+    .card__image__one {
+        margin-right: 40px;
+    }
+    .card__image__two {
+        margin-right: 40px;
+    }
+    .experience .experience-image1 {
+        margin-right: 40px;
+    }
+    .experience .experience-image2{
+        margin-right: 40px;
+    }
+    .blog-image1{
+        margin-right:40px;
+    }
+    .blog-image2{
+        margin-right:40px;
+    }
 
 
 }
+
+@media(max-width:768px){
+    .card__image__one {
+        margin-right: 40px;
+    }
+    .card__image__two {
+        margin-right: 40px;
+    }
+    .experience .experience-image1 {
+        margin-right: 40px;
+    }
+    .experience .experience-image2{
+        margin-right: 40px;
+    }
+    .blog-image1{
+        margin-right:40px;
+    }
+    .blog-image2{
+        margin-right:40px;
+    }
+    .blog__image__container{
+     margin-bottom: 300px;
+    }
+}
+ */

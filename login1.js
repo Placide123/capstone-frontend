@@ -28,6 +28,7 @@ document.querySelector("button")
 .addEventListener("click",(event)=>{
     event.preventDefault();
     validateInput();
+    LoginFunc(event);
 });
 
 function onSuccess(input){
@@ -50,3 +51,28 @@ function onError(input,message){
 function isValidEmail(email){
    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+function LoginFunc(e){
+event.preventDefault();
+
+var email= document.getElementById('txtEmail').value;
+var pwd=document.getElementById('txtPwd').value;
+var result=document.getElementById('result').value;
+var user=localStorage.getItem('formData');
+var data=JSON.parse(user);
+console.log(data);
+
+if(user==null){
+    alert("wrong username");
+    
+}else if(email==data.email && pwd==data.pwd){
+    
+    location.href="dashboardformessage.html";
+}
+else{
+    alert("wrong password");
+}
+}
+// var user=localStorage.getItem('formData');
+//  var data=JSON.parse(user);
+// console.log(data);

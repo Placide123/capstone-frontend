@@ -8,7 +8,7 @@
       <div class="header">
         <h2>Create User</h2>
       </div>
-      <form class="form">
+      <form class="form" role="form" onsubmit="signup(event);">
         <div class="form-control">
           <lable for="firstname" name="firstname">First Name</lable>
           <input id="txtFirstname" type="text" name="firstname" />
@@ -27,19 +27,25 @@
         </div>
         <div class="form-control">
           <lable for="pwd" name="pwd">Password</lable>
-          <input id="txtPwd" type="password" name="pwd" />
+          <input id="txtPwd" type="password" name="pwd" autocomplete="on" />
           <small>Error Message</small>
         </div>
         <div class="form-control">
           <lable for="conpwd" name="conpwd">Confirm Password</lable>
-          <input id="txtConPwd" type="password" name="conpwd" />
+          <input
+            id="txtConPwd"
+            type="password"
+            name="conpwd"
+            autocomplete="on"
+          />
           <small>Error Message</small>
         </div>
         <div class="form-control">
-          <button>Register</button>
+          <button id="btnRegister" type="submit">Register</button>
         </div>
       </form>
     </div>
     <script src="signup1.js"></script>
+    <!-- <script src="localstorage.js"></script> -->
   </body>
 </html>

@@ -3,7 +3,11 @@ let lastname=document.getElementById("txtLastname");
 let email=document.getElementById("txtEmail");
 let pwd=document.getElementById("txtPwd");
 let conPwd=document.getElementById("txtConPwd");
+let btnRegister=document.getElementById("btnRegister");
 let form=document.querySelector("form");
+let subscribeEmail=document.getElementById("subscribeEmail");
+
+
 
 function validateInput(){
     //check firstname is empty 
@@ -50,6 +54,8 @@ document.querySelector("button")
 .addEventListener("click",(event)=>{
     event.preventDefault();
     validateInput();
+    signup(event);
+    subscribe(event);
 });
 
 function onSuccess(input){
@@ -71,4 +77,27 @@ function onError(input,message){
 
 function isValidEmail(email){
    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+const   signup =e =>{
+    var formData={
+     firstname:document.getElementById("txtFirstname").value,
+    lastname:document.getElementById("txtLastname").value,
+    email:document.getElementById("txtEmail").value,
+    pwd:document.getElementById("txtPwd").value   
+    }
+    localStorage.setItem(`formData`,JSON.stringify(formData));
+    console.log(localStorage.getItem(formData.data));
+    e.preventDefault();
+    location.reload();
+}
+
+const  subscribe =e =>{
+    var subsData={ 
+    subscriber:document.querrySelector("subscribeEmail").value  
+    }
+    var pull=localStorage.setItem(`subsData`,JSON.stringify(subsData));
+    console.log(pull);
+    e.preventDefault();
+    location.reload();
 }

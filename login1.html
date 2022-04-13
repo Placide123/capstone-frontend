@@ -16,12 +16,13 @@
         </div>
         <div class="form-control">
           <lable for="pwd" name="pwd">Password</lable>
-          <input id="txtPwd" type="password" name="pwd" />
+          <input id="txtPwd" type="password" name="pwd" autocomplete="on" />
           <small>Error Message</small>
         </div>
 
         <div class="form-control">
-          <button>Register</button>
+          <button type="submit" onclick="LoginFunc()">Log In</button>
+          <p id="result">welcome, Login...</p>
         </div>
         <div class="form-control">
           <p>you don't have an account</p>
