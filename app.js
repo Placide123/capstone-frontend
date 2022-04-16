@@ -16,35 +16,76 @@ function close(){
     mainMenu.style.top='-100%';
 }
 
-const subscribeEmail=document.getElementById("subscribeEmail");
-const subscribe=document.getElementById("subscribe");
+let formSubscribe=document.getElementById("formSubscribe");
+const inputsubscriber=formSubscribe['subscriber'];
 
-// subscribe.addEventListener("click",function(){
-// const email=subscribeEmail.value;
-// console.log(email);
-// });
-function saveStorage(){
-    localStorage.setItem("Email",subscribeEmail.value);
-}
-subscribe.addEventListener("click",saveStorage);
+const subscribers=[];
+const addSubscriber=(subscriber) =>{
+    subscribers.push({
+        subscriber:subscriber,
+    });
+    localStorage.setItem("Subscribers",JSON.stringify(subscribers));
+    return {subscriber};
+};
+formSubscribe.onsubmit=e =>{
+    e.preventDefault();
+    const newSubscriber=addSubscriber(
+        inputsubscriber.value,
+    )
+};
 
- const getMessage=document.getElementById("getMessage");
- let name=document.getElementById("name").value;
- let email=document.getElementById("email").value;
-let message=document.getElementById("message").value  ;
+let formMessage= document.getElementById("formMessage");
+const inputName=formMessage['name1'];
+const inputEmail=formMessage['email'];
+const inputMessage=formMessage['message'];
 
-function saveMessage(){
-    console.log("herro there");
-    var messageData={
-    name:document.getElementById("name").value,
-    email:document.getElementById("email").value,
-    message:document.getElementById("message").value  
-    }
-      
-       localStorage.setItem("messageData",JSON.stringify(messageData));
-       console.log(localStorage.getItem(messageData.data));
-       e.preventDefault();
-       location.reload();
-       
-}
-getMessage.addEventListener("click",saveMessage);
+const messages=[];
+const addMessage=(name1,email,message) =>{
+    messages.push({
+        name1,
+        email,
+        message,
+    });
+    localStorage.setItem("Messages",JSON.stringify(messages));
+    return {name1,email,message}
+};
+formMessage.onsubmit= e =>{
+    e.preventDefault();
+    const newMessage=addMessage(
+        inputName.value,
+        inputEmail.value,
+        inputMessage.value
+    )
+};
+
+let formPost =document.getElementById("formPost");
+const inputTitle=formPost['title'];
+const inputAuthor=formPost['author'];
+const inputImage=formPost['image1'];
+const inputPost=formPost['post'];
+
+const posts=[];
+const addPost=(title,author,image1,post) =>{
+posts.push({
+    title,
+    author,
+    image,
+    post,
+});
+localStorage.setItem("Posts",JSON.stringify(posts));
+return {title,author,image1,post};
+};
+
+formPost.onsubmit= e =>{
+    e.preventDefault();
+    const newPost=addPost(
+        inputTitle.value,
+        inputAuthor.value,
+        inputImage.value,
+        inputPost.value,
+    )
+}; 
+
+
+
+ 

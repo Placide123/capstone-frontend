@@ -5,9 +5,53 @@ let pwd=document.getElementById("txtPwd");
 let conPwd=document.getElementById("txtConPwd");
 let btnRegister=document.getElementById("btnRegister");
 let form=document.querySelector("form");
-let subscribeEmail=document.getElementById("subscribeEmail");
+let formUser=document.getElementById("formUser");
+let formSubscribe=document.getElementById("formSubscribe")
+//let subscribeEmail=document.getElementById("subscribeEmail");
 
+const inputfirstname=formUser['firstname'];
+const inputlastname=formUser['lastname'];
+const inputemail=formUser['email'];
+const inputpassword=formUser['pwd'];
+const inputsubscriber=formSubscribe['subscriber'];
 
+const users=[];
+
+const addUser =(firstname,lastname,email,pwd) =>{
+    users.push({
+    firstname,
+    lastname,
+    email,
+    pwd,
+    });
+    localStorage.setItem("users",JSON.stringify(users));
+    return{firstname,lastname,email,pwd};
+};
+
+formUser.onsubmit= e =>{
+    e.preventDefault();
+    validateInput();
+    const newUser= addUser(
+        inputfirstname.value,
+        inputlastname.value,
+        inputemail.value,
+        inputpassword.value
+    )
+};
+const subscribers=[];
+const addSubscriber=(subscriber) =>{
+    subscribers.push({
+        subscriber:subscriber,
+    });
+    localStorage.setItem("Subscribers",JSON.stringify(subscribers));
+    return {subscriber};
+};
+formSubscribe.onsubmit=e =>{
+    e.preventDefault();
+    const newSubscriber=addSubscriber(
+        inputsubscriber.value,
+    )
+};
 
 function validateInput(){
     //check firstname is empty 
@@ -50,13 +94,13 @@ function validateInput(){
      }
 }
 
-document.querySelector("button")
-.addEventListener("click",(event)=>{
-    event.preventDefault();
-    validateInput();
-    signup(event);
-    subscribe(event);
-});
+// document.querySelector("button")
+// .addEventListener("click",(event)=>{
+//     event.preventDefault();
+//     validateInput();
+//     //signup(event);
+//     //subscribe(event);
+// });
 
 function onSuccess(input){
     let parent=input.parentElement;
@@ -79,25 +123,28 @@ function isValidEmail(email){
    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-const   signup =e =>{
-    var formData={
-     firstname:document.getElementById("txtFirstname").value,
-    lastname:document.getElementById("txtLastname").value,
-    email:document.getElementById("txtEmail").value,
-    pwd:document.getElementById("txtPwd").value   
-    }
-    localStorage.setItem(`formData`,JSON.stringify(formData));
-    console.log(localStorage.getItem(formData.data));
-    e.preventDefault();
-    location.reload();
-}
+// const   signup =e =>{
+//     var formData={
+//      firstname:document.getElementById("txtFirstname").value,
+//     lastname:document.getElementById("txtLastname").value,
+//     email:document.getElementById("txtEmail").value,
+//     pwd:document.getElementById("txtPwd").value,   
+//     }
+//     let abc=[];
+//     abc.push(formData);
+//     console.log(abc);
+//     localStorage.setItem(`formData`,JSON.stringify(abc));
+//     console.log(localStorage.getItem(formData.data));
+//     e.preventDefault();
+//    // location.reload();
+// }
 
-const  subscribe =e =>{
-    var subsData={ 
-    subscriber:document.querrySelector("subscribeEmail").value  
-    }
-    var pull=localStorage.setItem(`subsData`,JSON.stringify(subsData));
-    console.log(pull);
-    e.preventDefault();
-    location.reload();
-}
+// const  subscribe =e =>{
+//     var subsData={ 
+//     subscriber:document.querySelector("subscribeEmail").value,  
+//     }
+//     var pull=localStorage.setItem(`subsData`,JSON.stringify(subsData));
+//     console.log(pull);
+//     e.preventDefault();
+//     location.reload();
+// }
