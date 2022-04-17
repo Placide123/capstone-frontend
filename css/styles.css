@@ -173,7 +173,7 @@ header .welcome a:hover{
     color: #34A9A2;
     padding: 10px;
     text-decoration: none;
-   bottom:2rem;
+   bottom:1rem;
 }
 .aboutus-side2 .icons1{  
 margin: 20px;
@@ -271,8 +271,7 @@ align-items: center;
 
 .portifolio-image__container{ 
     width: 30%;
-    height: 400px;
-    
+    height: 400px; 
     }
 
    .portifolio-image__container img{
@@ -398,7 +397,6 @@ border-radius: 10px;
 footer{
     
     width: 100%;
-    
     background-color: beige;
      
 }
@@ -409,7 +407,7 @@ footer .footer{
 }
 
 .experience{
-    height: 105vh;
+    height: 100vh;
     width: 100%;
     padding: 20px 80px; 
 }
@@ -421,25 +419,23 @@ footer .footer{
 .experience .experience-image{
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 5px;
 }
 
 .experience .experience-image .experience-image1 h2,h3{
     padding-bottom: 15px;
 }
 
-
 .experience .experience-image .experience-image2 h2,h3{
     padding-bottom: 15px;
 }
-
 
 .experience .experience-image .experience-image3 h2,h3{
     padding-bottom: 15px;
 }
 .experience__image__container{
     width: 30%;
-    height: 400px;
+    height: 300px;
     margin-bottom: 20px;
 }
 .experience  .experience-image1,
@@ -500,12 +496,228 @@ footer .footer{
 .blog-image2{
     margin-right:50px;
 }
+/* laptop 1024px */
+@media (max-width:1024px) {
+    .myservice{
+        padding-top: 100px;
+        height: 80vh;
+    }
+    .portifolio{
+        padding-top: 120px;
+        height: 1000vh;
+    }
+    .experience{
+        padding-top: 120px;
+        height: 80vh;
+    }
+    .blog{
+        padding-top: 100px;
+        height: 80vh;
+    }
+    .aboutus{
+        padding-top: 100px;
+        height: 80vh;
+    }
+    .myservice-image1{
+        background-color: #C4C4C4;
+        height :300px; 
+        width: 30%; 
+    }
+    .myservice-image{   
+        padding: 10px 30px;  
+    } 
+    .portifolio .portifolio-image{
+        padding: 10px 30px;
+    }
+    .portifolio .portifolio-image__container{ 
+        width: 30%;
+        height: 250px; 
+        }
+       .portifolio-image__container img{
+       width:100%;
+       height: 250px; 
+       } 
+       .experience{
+        padding: 10px 30px; 
+    }
+
+       .experience__image__container{
+        width: 30%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .experience  .experience-image1,
+    .experience  .experience-image2{
+        margin-right: 30px;
+    }
+    
+    .experience__image__container img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .blog{
+        height: 100vh;
+    }
+    .blog .blog-image{
+        padding: 10px 30px;
+    }
+    .blog__image__container{
+        width: 30%;
+        height: 400px;
+        margin-bottom: 20px; 
+    }
+    .blog__image__container img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .contact-image{
+        padding: 10px 30px;
+    }
+    .contact-image .contact-image1{
+        height: 200px;
+        width: 30%;   
+    }
+    .contact{
+        height: 100vh;
+    }
+    .card__image__one {
+        margin-right: 20px;
+    }
+    .card__image__two {
+        margin-right: 20px;
+    }
+    .experience .experience-image1 {
+        margin-right: 20px;
+    }
+    .experience .experience-image2{
+        margin-right: 20px;
+    }
+    .blog-image1{
+        margin-right:20px;
+    }
+    .blog-image2{
+        margin-right:20px;
+    }
+    .blog__image__container{
+     margin-bottom: 200px;
+    }
+}
 
 
+/* TABLET QUERRIES */
+@media(max-width:768px){
 
-@media(min-width:330px) and (max-width:550px){
     section{
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .navigation .mainMenu li a{
+        display: inline-block;
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+    .myservice-image1{
+        background-color: #C4C4C4;
+        height :250px; 
+        width: 30%; 
+    }
+    .myservice-image{
+        
+        padding: 10px 30px;
+        
+    }
+
+    .portifolio .portifolio-image{
+        padding: 10px 30px;
+    }
+    .portifolio .portifolio-image__container{ 
+        width: 30%;
+        height: 250px;
+        
+        }
+    
+       .portifolio-image__container img{
+       width:100%;
+       height: 250px;
+       
+       }
+       .experience{
+        padding: 10px 30px; 
+    }
+
+       .experience__image__container{
+        width: 30%;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .experience  .experience-image1,
+    .experience  .experience-image2{
+        margin-right: 30px;
+    }
+    
+    .experience__image__container img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .blog .blog-image{
+        padding: 20px 30px;
+    }
+    .blog__image__container{
+        width: 30%;
+        height: 400px;
+        margin-bottom: 20px; 
+    }
+    .blog__image__container img{
+        width:100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .contact-image{
+        padding: 10px 30px;
+    }
+    .contact-image .contact-image1{
+        height: 200px;
+        width: 30%;   
+    }
+    .contact{
+        height: 105vh;
+    }
+    
+    
+    
+    .card__image__one {
+        margin-right: 30px;
+    }
+    .card__image__two {
+        margin-right: 30px;
+    }
+    .experience .experience-image1 {
+        margin-right: 30px;
+    }
+    .experience .experience-image2{
+        margin-right: 30px;
+    }
+    .blog-image1{
+        margin-right:30px;
+    }
+    .blog-image2{
+        margin-right:30px;
+    }
+    .blog__image__container{
+     margin-bottom: 300px;
+    }
+}
+ 
+/* MOBILE QUERIES */
+
+@media(max-width:564px){
+    section{
+        margin-bottom: 0.2rem;
     }
 
  .navigation{
@@ -626,14 +838,6 @@ header .welcome a:hover{
     object-fit: cover;
 }
 
-
-
-/* .aboutus-side .aboutus-side1 img{
-    height: 500px;
-    width: 500px; 
-    margin-bottom: 20px;  
-    
-} */
 .aboutus-side2 .iconify{
     margin: 0.3rem; 
 }
@@ -661,7 +865,7 @@ header .welcome a:hover{
   }
 
 .portifolio{
-    height: 180vh;
+    height: 200vh;
     width: 100%;
 }
 .portifolio .portifolio-image{
@@ -673,27 +877,27 @@ header .welcome a:hover{
     
 }
 .portifolio .portifolio-image__container{
-    height: 300px;
+    height: 250 px;
     width: 100%;
    
 }
 
 .portifolio .portifolio-image__container img{
     width:100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
 
     
 }
 
 .experience{
-    height: 300vh;
+    height: 250vh;
     width: 100%;
     padding: 10px 60px;
 }
 
 .experience__image__container{
-    height: 300px;
+    height: 200px;
     width: 100%;
     margin-bottom: 250px;
 }
@@ -703,17 +907,18 @@ header .welcome a:hover{
 }
 
 .blog {
-    height: 300vh;
+    height: 250vh;
     width: 100%;
+    padding: 10px 60px;
 }
  .blog .blog-image{
-    height: 350vh;
+    height: 280vh;
     width: 100%;
     flex-direction: column;
  }
  .blog__image__container{
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin-right: 0;
     margin-bottom: 220px;
 }
@@ -738,28 +943,3 @@ footer p{
 
 }
 
-
-@media(max-width:768px){
-    .card__image__one {
-        margin-right: 40px;
-    }
-    .card__image__two {
-        margin-right: 40px;
-    }
-    .experience .experience-image1 {
-        margin-right: 40px;
-    }
-    .experience .experience-image2{
-        margin-right: 40px;
-    }
-    .blog-image1{
-        margin-right:40px;
-    }
-    .blog-image2{
-        margin-right:40px;
-    }
-    .blog__image__container{
-     margin-bottom: 300px;
-    }
-}
- 

@@ -55,11 +55,15 @@ body{
     visibility: hidden;
 }
 button{
-    background-color: rgb(4,4,95);
-    color:#fff;
+    background-color: beige;
+    color:#34A9A2;
     padding: 10px 20px;
     width: 100%;
     border-radius:4px;
-    border:2px solid rgb(4,4,95);
+    border:2px solid #34A9A2;
     cursor: pointer;
+}
+.form-control p a{
+    text-decoration: none;
+    color: #34A9A2;
 }
