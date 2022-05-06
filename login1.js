@@ -15,7 +15,6 @@ function validateInput(){
             onSuccess(email);
         }
     }
-
     //password
     if(pwd.value.trim()===""){
         onError(pwd,"Password cannot be empty");
@@ -29,6 +28,7 @@ document.querySelector("button")
     event.preventDefault();
     validateInput();
     LoginFunc(event);
+          location.href="dashboardformessage.html";
 });
 
 function onSuccess(input){
@@ -58,20 +58,49 @@ event.preventDefault();
 var email= document.getElementById('txtEmail').value;
 var pwd=document.getElementById('txtPwd').value;
 var result=document.getElementById('result').value;
-var user=localStorage.getItem('formData');
+var user=localStorage.getItem('users');
 var data=JSON.parse(user);
-console.log(data);
+console.log(user);
+//console.log(data[0].email);
 
-if(user==null){
-    alert("wrong username");
+for(let i= 0; i<data.length; i++){
     
-}else if(email==data.email && pwd==data.pwd){
+    if(data[i].email === email && data.pwd === pwd){
+      console.log(data[i].email);
+      console.log(data[i].pwd);
+      
+    }else{
+      console.log("user doesn't exist");
+    }
+  }
+//   let exist = data.filter(item => data.email === email && data.pwd === pwd)[0]
+//   console.log(exist);
+// if(data == null){
+//     alert("NO data found");
+// }else{
+//     data.forEach( data => {
+
+      
+        
+        
+//     if(data.email === email && data.pwd === pwd){
+//       location.href="dashboardformessage.html";
+//     }else{
+//       alert("incorrect credentials");
+//     }
+//   })
+// }
+
+// if(user==null){
+//     alert("wrong username");
     
-    location.href="dashboardformessage.html";
-}
-else{
-    alert("wrong password");
-}
+// }else if(email==data[0].email && pwd==data[0].pwd){
+    
+//     location.href="dashboardformessage.html";
+// }
+// else{
+//     alert("wrong password");
+// }
 }
 // var user=localStorage.getItem('formData');
 //  var data=JSON.parse(user);

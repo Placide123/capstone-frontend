@@ -12,25 +12,25 @@
         <div class="container1">
             <ul>
               <li>
-                <a href="">
+                <a href="dashboardforuser.html">
                   <img src="image/users.svg" alt="" />
                   manage blog
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="dashboardforblog.html">
                   <img src="image/blog.svg" alt="" />
                   manage users
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="dashboardforcomment.html">
                   <img src="image/comment.svg" alt="" />
                   manage comments
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="index.html">
                   LOG OUT
                 </a>
               </li>
@@ -52,19 +52,19 @@
                 
                 <div class="form-control">
                     <label for="title">Title</label>
-                   <input type="text" name="title">
+                   <input type="text" name="title" id="title">
                 </div>
                 <div class="form-control">
                    <label for="author">Author</label>
-                   <input type="text" name="author">
+                   <input type="text" name="author" id="author">
                 </div>
                 <div class="form-control">
                    <label for="image">Image</label>
-                   <input type="file" name="image1">
+                   <input type="file" name="image1" id="image1">
                 </div>
                 <div class="form-control">
                    <label for="post">Description</label>
-                   <textarea name="post" id="" cols="30" rows="10"></textarea>
+                   <textarea name="post" id="Description" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-control">
                     <button id="btnRegister" type="submit">Save Post</button>
@@ -74,6 +74,30 @@
         </div>
           </div>
       </div> 
-      <script src="app.js"></script>
+      <script src="app.js">
+  //       function addNewArticle(){
+  //  let title = document.querySelector("#title"),
+  //   author = document.querySelector("#author"),
+  //   Description = document.querySelector("#Description");
+   
+  //    let articles = JSON.parse(localStorage.getItem('articles'));
+  //     if (articles) {
+  //       articles = articles.length > 0?articles : [];
+  //     }else{
+  //         articles =[]
+  //     }
+  //    let blogArticle = {
+  //       Description:Description.value,
+  //       author: author.value,
+  //       title: title.value,
+  //       image: img
+  //   }
+  //    articles.push(blogArticle)
+  //   localStorage.setItem('articles',JSON.stringify(articles));
+  //   alert("New article has been added successfully");
+  //   //window.location = 'dashboard.html'
+
+// }
+      </script>
 </body>
 </html>

@@ -18,19 +18,25 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="dashboardforuser.html">
               <img src="image/blog.svg" alt="" />
               manage users
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="dashboardforcomment.html">
               <img src="image/comment.svg" alt="" />
               manage comments
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="dashboardformessage.html">
+              <img src="image/message.png" alt="" />
+              manage Message
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
               LOG OUT
             </a>
           </li>
@@ -45,16 +51,16 @@
               <th colspan="6">OVERVIEW</th>
             </tr>
             <tr>
-              <th>ID</th>
+              <!-- <th>ID</th> -->
               <th>NAME</th>
               <th>EMAIL</th>
               <th>QUERRIES</th>
-              <th>EDIT</th>
-              <th>DELETE</th>
+                   <!-- <th>EDIT</th>
+         <th>DELETE</th> -->
             </tr>
           </thead>
-          <tbody>
-            <tr>
+           <tbody>
+           <!-- <tr>
               <td>1</td>
               <td>TWIRINGIYIMANA PLACIDE</td>
               <td>castlewitty9@gmail.com</td>
@@ -93,10 +99,43 @@
               <td>Message</td>
               <td>Edit</td>
               <td>Delete</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
     </div>
+    <script>
+    document.addEventListener("DOMContentLoaded",function(){
+      viewQueries()
+    })
+    function viewQueries() {
+      let queries = JSON.parse(localStorage.getItem('Messages'));
+      if(queries && queries.length > 0){
+        queries.forEach((query,idx)=>{
+          let queryEl = `
+          <tr>
+            <td>
+            ${query.name1}
+            </td>
+            <td>
+            ${query.email}
+            </td>
+            <td>
+            ${query.message}
+            </td>
+
+            </tr>
+          `;
+          let tr = document.createElement('tr');
+
+          var doc = new DOMParser().parseFromString(queryEl, 'text/html');
+          tr.innerHTML = queryEl;
+           document.querySelector('tbody').appendChild(tr);
+        });
+      }
+      
+    }
+    </script>
   </body>
+  
 </html>

@@ -81,10 +81,12 @@ formPost.onsubmit= e =>{
     const newPost=addPost(
         inputTitle.value,
         inputAuthor.value,
-        inputImage.value,
+        image.target.value,
         inputPost.value,
     )
 }; 
+
+
 
 
 

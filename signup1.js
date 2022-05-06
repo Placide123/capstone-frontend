@@ -13,7 +13,7 @@ const inputfirstname=formUser['firstname'];
 const inputlastname=formUser['lastname'];
 const inputemail=formUser['email'];
 const inputpassword=formUser['pwd'];
-const inputsubscriber=formSubscribe['subscriber'];
+// const inputsubscriber=formSubscribe['subscriber'];
 
 const users=[];
 
@@ -38,20 +38,20 @@ formUser.onsubmit= e =>{
         inputpassword.value
     )
 };
-const subscribers=[];
-const addSubscriber=(subscriber) =>{
-    subscribers.push({
-        subscriber:subscriber,
-    });
-    localStorage.setItem("Subscribers",JSON.stringify(subscribers));
-    return {subscriber};
-};
-formSubscribe.onsubmit=e =>{
-    e.preventDefault();
-    const newSubscriber=addSubscriber(
-        inputsubscriber.value,
-    )
-};
+// const subscribers=[];
+// const addSubscriber=(subscriber) =>{
+//     subscribers.push({
+//         subscriber:subscriber,
+//     });
+//     localStorage.setItem("Subscribers",JSON.stringify(subscribers));
+//     return {subscriber};
+// };
+// formSubscribe.onsubmit=e =>{
+//     e.preventDefault();
+//     const newSubscriber=addSubscriber(
+//         inputsubscriber.value,
+//     )
+// };
 
 function validateInput(){
     //check firstname is empty 
