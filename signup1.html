@@ -8,7 +8,7 @@
       <div class="header">
         <h2>Create User</h2>
       </div>
-      <form class="form" role="form" onsubmit="signup(event);" id="formUser">
+      <form class="form" role="form"  id="formUser" onsubmit="return false;">
         <div class="form-control">
           <lable for="firstname" name="firstname">First Name</lable>
           <input id="txtFirstname" type="text" name="firstname" />
@@ -41,7 +41,7 @@
           <small>Error Message</small>
         </div>
         <div class="form-control">
-          <button id="btnRegister" type="submit">Register</button>
+          <button id="btnRegister" type="submit" onclick="addUser1();">Register</button>
           <p>already have account? <a href="login1.html">login</a></p>
         </div>
       </form>

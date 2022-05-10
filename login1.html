@@ -9,7 +9,7 @@
       <div class="header">
         <h2>Login here</h2>
       </div>
-      <form class="form">
+      <form class="form" onsubmit="return false;">
         <div class="form-control">
           <lable for="email" name="email">Email</lable>
           <input id="txtEmail" type="email" name="email" />
@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-control">
-          <button type="submit" onclick="LoginFunc()">Log In</button>
+          <button type="submit" onclick="loginUser()">Log In</button>
           <p id="result">welcome, Login...</p>
         </div>
         <div class="form-control">

@@ -287,7 +287,7 @@
         </div>
         <div class="emailuse">
           <div class="message">
-            <form action="" class="message1" id="formMessage">
+            <form action="" class="message1" id="formMessage" onsubmit="return false;">
               <input
                 type="text"
                 name="name1"
@@ -308,12 +308,12 @@
                 cols="30"
                 rows="10"
               ></textarea>
-              <button type="submit" id="getMessage">Send your Message</button>
+              <button type="submit" id="getMessage" onclick="SendMessage()">Send your Message</button>
             </form>
           </div>
           <div class="subscribe">
             <p>Enter your Email to subscribe for update</p>
-            <form action="" role="form" id="formSubscribe">
+            <form action="" role="form" id="formSubscribe" onsubmit="return false;">
               <input
                 type="txt"
                 name="subscriber"
@@ -321,7 +321,7 @@
                 placeholder="Enter your Email"
                 required
               />
-              <button type="submit" id="subscribe">Subscribe</button>
+              <button type="submit" id="subscribe" onclick="Subscribe()"  >Subscribe</button>
             </form>
           </div>
         </div>
@@ -338,6 +338,7 @@
       </p>
     </footer>
     <script src="script/app.js" defer></script>
+    <script src="script/fetchBlog.js"></script>
     <!-- <script src="./signup1.js"></script> -->
   </body>
 </html>

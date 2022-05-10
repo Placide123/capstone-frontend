@@ -48,7 +48,7 @@
            <div class="blogD">
             <div><h1>ADD A BLOG</h1></div>
             <div>
-               <form action="" id="formPost">
+               <form action="" id="formPost" onsubmit="return false;">
                 
                 <div class="form-control">
                     <label for="title">Title</label>
@@ -67,37 +67,13 @@
                    <textarea name="post" id="Description" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-control">
-                    <button id="btnRegister" type="submit">Save Post</button>
+                    <button id="btnRegister" type="submit" onclick="SendArticle()">Save Post</button>
                   </div>
                </form>
             </div>
         </div>
           </div>
       </div> 
-      <script src="script/app.js">
-  //       function addNewArticle(){
-  //  let title = document.querySelector("#title"),
-  //   author = document.querySelector("#author"),
-  //   Description = document.querySelector("#Description");
-   
-  //    let articles = JSON.parse(localStorage.getItem('articles'));
-  //     if (articles) {
-  //       articles = articles.length > 0?articles : [];
-  //     }else{
-  //         articles =[]
-  //     }
-  //    let blogArticle = {
-  //       Description:Description.value,
-  //       author: author.value,
-  //       title: title.value,
-  //       image: img
-  //   }
-  //    articles.push(blogArticle)
-  //   localStorage.setItem('articles',JSON.stringify(articles));
-  //   alert("New article has been added successfully");
-  //   //window.location = 'dashboard.html'
-
-// }
-      </script>
+      <script src="script/addblog.js"></script>
 </body>
 </html>
