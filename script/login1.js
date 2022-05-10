@@ -134,7 +134,7 @@ async function loginUser() {
             localStorage.setItem("token", response.token);
             localStorage.setItem("user", JSON.stringify(response.data));
             if (response.data.role == "admin") {
-                location.href = "../dashboardformessage.html";
+                location.href = "./capstone-frontend/dashboardformessage.html";
             }
             else {
                 location.href = "../dashboardforuser.html";
