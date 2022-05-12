@@ -11,9 +11,10 @@ const fetchBlogs = async () => {
             console.log(result)
 
 
-            result?.length ?
-                document.querySelector(".blog-image").innerHTML = result.map((res) =>
+            result?.length?
+                document.querySelector(".blog-images").innerHTML = result.map((res) =>
                 `
+               
                 <div class="blog-image">
                 <div class="blog-image1 blog__image__container">
                   <img src=" ${res.photo}" alt="showing a design" />
@@ -24,11 +25,12 @@ const fetchBlogs = async () => {
                     <a href="portifolio.html">read more</a>
                   </p>
                 </div>
-           
+                </div>
+              
       
                 
                 `).join(" ") :
-                document.querySelector(".").innerHTML = "blogs not found";
+                document.querySelector(".blog-images").innerHTML = "blogs not found";
         })
     }
 

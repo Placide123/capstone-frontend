@@ -122,7 +122,7 @@
         }
     }
     
-    Subscribe();
+    //Subscribe();
 
 
 
@@ -152,6 +152,7 @@
                 if (SendMessage.success && SendMessage.data) {
                     form.reset();
                     alert("Message Sent Successfully");
+                    location.reload();
                 } else {
                     alert("Error", response.message, "error");
                 }
@@ -161,4 +162,4 @@
         }
     }
 
-    SendMessage();
+    //SendMessage();

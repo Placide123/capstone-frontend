@@ -27,9 +27,12 @@ async function SendArticle() {
             });
             const response = await SendArticle.json();
             console.log(response);
-            if (SendArticle.success && SendArticle.data) {
+            if (response.success && response.data) {
                 form.reset();
+
                 alert("post Sent Successfully");
+                location.reload();
+
             } else {
                 alert("Error", response.message, "error");
             }

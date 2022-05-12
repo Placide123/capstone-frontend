@@ -114,3 +114,15 @@ border: 2px solid #34A9A2;
 
 }
 
+button{
+    padding: 10px 30px;
+    color:black;
+    background-color: beige;
+    cursor: pointer;
+}
+
+button :hover{
+    background-color: aqua;
+    color: beige;
+}
+

@@ -37,7 +37,7 @@ const fetchUsers = async () => {
         ${res.password}
         </td>
         <td>
-        <a href="#">Delete</a>
+        <button id="${res?._id}"  onclick="deleteUser(this.id)">DELETE</button>
         </td>
 
         </tr>
