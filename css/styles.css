@@ -42,11 +42,12 @@ header{
     font-size: 1rem;
 }
  .navigation .mainMenu li a:hover{
-    color: #34A9A2;
-        background-color: beige;
+    
+    border-bottom: 1px solid beige;
+        /* //background-color: beige; */
         padding:10px;
-        border:10px solid #34A9A2;
-        border-radius: 20px;
+        /* border:10px solid #34A9A2; */
+        border-radius: 10px;
 }
 .navigation .openMenu{
     
@@ -114,8 +115,10 @@ header .welcome a{
     border: 2px solid white;
 }
 header .welcome a:hover{
-    background-color: beige;
-    color: aqua;
+        border-bottom: 1px solid beige;
+        padding:10px;
+        border-radius: 10px;
+
 }
 /* end of the header css */
 /* beginning of the about us css */
@@ -124,7 +127,6 @@ header .welcome a:hover{
     background-color:white;
     height: 100vh;
     width: 100%;
-
     
 }
 .aboutustitle p{
@@ -139,6 +141,7 @@ header .welcome a:hover{
 .aboutus-side{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     background-color: beige;
     height: 500px;   
     width: 100%;
@@ -473,15 +476,20 @@ footer .footer{
 .blog-image{
     display: flex;
     width: 30vw;
-    height: 80vh;
+    height: 60vh;
     margin: 20px; 
     margin-bottom: 20px; 
 }
-.blog__image__container img{
+.blog-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* .blog__image__container img{
     width:100%;
     height: auto;
     object-fit: cover;
-}
+} */
 
 .blog .blog-image .blog-image1 h2,h3{
     padding-bottom: 15px;
